@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/articles_model.dart';
 
-import '../shared/customlisttile.dart';
+import '../shared/myWidgets.dart';
 
 class NewsDetail extends StatelessWidget {
   Article? article;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '/http/http_service.dart';
-import '/shared/customlisttile.dart';
+import '../shared/myWidgets.dart';
 import '/models/articles_model.dart';
 
 class HomePage extends StatefulWidget {
