@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
               itemCount: articles.length,
               itemBuilder: (context, index) {
                 Article article = articles[index];
-                return customListTile(article);
+                return customListTile(context, article);
               },
             );
           }
