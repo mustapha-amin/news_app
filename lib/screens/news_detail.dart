@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/articles_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../shared/myWidgets.dart';
 
@@ -48,7 +49,6 @@ class NewsDetail extends StatelessWidget {
                 ),
               ),
             ),
-            Text(article!.url!),
           ],
         ),
       ),

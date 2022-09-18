@@ -9,7 +9,7 @@ class HttpService {
   static const baseUrl = "newsapi.org";
   static const endPointUrl = "/v2/top-headlines";
   static const queryParams = {
-    'country': 'ng',
+    'country': 'us',
     'apiKey': 'd2b3e7c223474595b47f35e8dce19e7d'
   };
 
