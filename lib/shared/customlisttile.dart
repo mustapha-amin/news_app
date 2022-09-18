@@ -1,30 +1,50 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/models/articles_model.dart';
+import '/models/articles_model.dart';
 
 Widget customListTile(Article article) {
   return Container(
-    constraints: const BoxConstraints(maxHeight: 400),
+    constraints: const BoxConstraints(maxHeight: 260),
     decoration: BoxDecoration(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(10),
-    ),
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black,
+            blurRadius: 3.0,
+          ),
+        ]),
     padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
     child: Column(
       children: [
         Container(
-          height: 200,
+          height: 169,
           decoration: article.urlToImage != null
               ? BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
                     image: NetworkImage(article.urlToImage!),
+                    fit: BoxFit.cover,
                   ),
                 )
-              : null,
+              : BoxDecoration(color: Colors.grey),
         ),
         addVerticalSpace(10),
         Container(
-          child: Text(article.title!),
-        )
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: const EdgeInsets.only(left: 5, right: 5),
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(article.source!.name!),
+              ),
+              Text(article.title!),
+            ],
+          ),
+        ),
       ],
     ),
   );

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter_application_6/models/articles_model.dart';
+import '/models/articles_model.dart';
 import 'package:http/http.dart';
 
 class HttpService {
