@@ -29,7 +29,7 @@ class NewsDetail extends StatelessWidget {
           children: [
             Container(
               height: 180,
-              decoration: article!.urlToImage != null
+              decoration: article!.urlToImage! != null
                   ? BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
@@ -37,7 +37,7 @@ class NewsDetail extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     )
-                  : BoxDecoration(color: Colors.grey),
+                  : const BoxDecoration(color: Colors.grey),
             ),
             addVerticalSpace(10),
             Container(
@@ -48,6 +48,7 @@ class NewsDetail extends StatelessWidget {
                 ),
               ),
             ),
+            Text(article!.url!),
           ],
         ),
       ),
